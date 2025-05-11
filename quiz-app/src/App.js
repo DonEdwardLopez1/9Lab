@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
 import lowScoreSound from './sounds/low-score.mp3';
-import backgroundVideo from './videos/background.mp4';
 
 const quizData = [
-    { question: 'What is the capital of France?', options: ['Berlin', 'Madrid', 'Paris', 'Rome'], correctAnswer: 'Paris' },
-    { question: 'What is the largest planet in our solar system?', options: ['Earth', 'Mars', 'Jupiter', 'Saturn'], correctAnswer: 'Jupiter' },
-    { question: 'What is the chemical symbol for water?', options: ['H2O', 'O2', 'CO2', 'NaCl'], correctAnswer: 'H2O' }
+    { question: 'Which of these is primarily used for running JavaScript code on the server (back-end)?', options: ['React.js', 'Bootstrap', 'Node.js', 'Vite'], correctAnswer: 'Node.js' },
+    { question: 'When a React project uses TypeScript, what is the common file extension for its components?', options: ['.js', '.html', '.tsx', '.css'], correctAnswer: '.tsx' },
+    { question: 'Which npm package is typically used for styling and designing the front-end (user interface) of a website?', options: ['cors', 'body-parser', 'bootstrap', 'uuid'], correctAnswer: 'bootstrap' }
 ];
 
 function App() {
@@ -38,10 +37,6 @@ function App() {
 
     return (
         <div className="app">
-            <video autoPlay loop muted className="background-video">
-                <source src={backgroundVideo} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
             <div className="container">
                 <h1 className='quiz-app-head'>Quiz App</h1>
                 {showResult ? (
