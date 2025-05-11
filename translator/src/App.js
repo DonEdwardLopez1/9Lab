@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import backgroundVideo from './videos/background.mp4';
 
 function App() {
   const [englishWord, setEnglishWord] = useState('');
@@ -44,11 +43,7 @@ function App() {
 
   return (
     <div className="app">
-            <video autoPlay loop muted className="background-video">
-                <source src={backgroundVideo} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-            <div className="container">
+      <div className="container">
       <h1>ENGLISH TO TAGALOG TRANSLATOR</h1>
       <div className="input-group">
         <label htmlFor="english-word">English Word: </label>
